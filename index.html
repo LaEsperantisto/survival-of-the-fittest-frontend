@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
-  <script type="module" crossorigin src="./assets/index-CIk0lNeO.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-tlCLFVQR.css">
+  <script type="module" crossorigin src="./assets/index-Brk2uIFj.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-wcuzUpE1.css">
 </head>
 <body>
 <div id="game-wrap">
@@ -18,6 +18,7 @@
 <div id="hud" class="hidden">
   <div id="crosshair">+</div>
   <div id="breakbar" class="hidden"><div id="breakfill"></div></div>
+  <button id="surge-btn" class="hidden" title="Sweat surge (X): spend water to force your body cool">Sweat Surge</button>
   <div id="prompt" class="hidden"></div>
   <div id="clockbox"><span id="clock-day">Day 1</span> <span id="clock-time">06:00</span> <span id="clock-temp">30&#176;C</span></div>
   <div id="quest"></div>
@@ -44,6 +45,7 @@
     <button id="m-place">Place</button>
     <button id="m-act">Act</button>
     <button id="m-drink">Drink</button>
+    <button id="m-surge">Surge</button>
     <button id="m-next">Item</button>
     <button id="m-inv">Bag</button>
   </div>
@@ -114,12 +116,19 @@
     <button data-speed="2">2×</button>
     <button data-speed="4">4×</button>
     <button data-speed="8">8×</button>
+    <div class="cheat-lab">Immortality</div>
+    <button data-immortal="0">Off</button>
+    <button data-immortal="1">On</button>
   </div>
 </div>
 
 <!-- Inventory / crafting -->
 <div id="ui-inventory" class="panel hidden">
   <button class="close-btn close-x" aria-label="Close">✕</button>
+  <div id="chest-section" class="hidden">
+    <h3>Supply Chest <span id="chest-info"></span></h3>
+    <div id="chest-grid"></div>
+  </div>
   <h3>Inventory <span id="inv-weight"></span></h3>
   <div id="inv-main">
     <div id="inv-grid"></div>
