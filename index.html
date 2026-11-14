@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
-  <script type="module" crossorigin src="./assets/index-yMlfCfx-.js"></script>
+  <script type="module" crossorigin src="./assets/index-yGAjPLPR.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-Ddqov-i0.css">
 </head>
 <body>
@@ -58,6 +58,7 @@
     <input id="seed-input" type="text" placeholder="seed (blank = random)">
     <input id="world-name" type="text" placeholder="world name (blank = seed)">
     <button id="btn-create">Create World</button>
+    <button id="btn-guest">Guest World</button>
     <button id="btn-import">Import World</button>
     <input id="import-file" type="file" accept=".json" class="hidden">
     <button id="btn-instructions">How to survive</button>
@@ -99,6 +100,13 @@
   <button id="btn-save">Save Game</button>
   <button id="btn-exportworld">Export World (.json)</button>
   <button id="btn-quit">Quit to Title</button>
+  <button id="btn-cheats">Cheats</button>
+  <div id="cheats" class="hidden">
+    <button data-frac="0">Midnight</button>
+    <button data-frac="0.25">Dawn</button>
+    <button data-frac="0.5">Noon</button>
+    <button data-frac="0.75">Dusk</button>
+  </div>
 </div>
 
 <!-- Inventory / crafting -->
@@ -126,7 +134,7 @@
 </div>
 
 <div id="ui-cache" class="panel hidden">
-  <h3>Death Cache — take your belongings</h3>
+  <h3 id="cache-title">Death Cache — take your belongings</h3>
   <div id="cache-list"></div>
   <button class="close-btn">Close</button>
 </div>
