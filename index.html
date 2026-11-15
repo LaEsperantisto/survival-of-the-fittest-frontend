@@ -4,20 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
-  <script type="module" crossorigin src="./assets/index-DCx32SLw.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Dy6eDg_P.css">
+  <script type="module" crossorigin src="./assets/index-BouOBUNM.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-hHZJNUs4.css">
 </head>
 <body>
 <div id="game-wrap">
   <div id="vision-vignette"></div>
   <div id="vision-red"></div>
   <div id="vision-water"></div>
+  <div id="vision-hit"></div>
 </div>
 
 <!-- HUD -->
 <div id="hud" class="hidden">
   <div id="crosshair">+</div>
   <div id="breakbar" class="hidden"><div id="breakfill"></div></div>
+  <div id="blockname" class="hidden"></div>
+  <div id="hotbar"></div>
   <button id="surge-btn" class="hidden" title="Sweat surge (X): spend water to force your body cool">Sweat Surge (X)</button>
   <div id="prompt" class="hidden"></div>
   <div id="clockbox"><span id="clock-day">Day 1</span> <span id="clock-time">06:00</span> <span id="clock-temp">30&#176;C</span></div>
@@ -28,7 +31,9 @@
     <div class="bar-row"><span class="bar-label">H&#8322;O</span>
       <div class="bar" id="bar-water"><div class="fill"></div><div class="safe"></div></div></div>
     <div class="bar-row"><span class="bar-label">TEMP</span>
-      <div class="bar" id="bar-heat"><div class="fill"></div><div class="safe"></div></div></div>
+      <div class="bar" id="bar-heat"><div class="fill"></div><div class="safe"></div></div>
+      <span id="warn-hot" class="hidden" title="Overheating">&#9728;</span>
+      <span id="warn-cold" class="hidden" title="Hypothermia">&#10052;</span></div>
   </div>
   <div id="held"></div>
   <div id="weight"></div>
@@ -102,6 +107,7 @@
   <button class="close-btn close-x" aria-label="Close">✕</button>
   <h2>Paused</h2>
   <button id="btn-resume">Resume</button>
+  <button id="btn-pause-instructions">Instructions</button>
   <button id="btn-pause-settings">Settings</button>
   <button id="btn-catalog">Catalog</button>
   <button id="btn-save">Save Game</button>
@@ -127,6 +133,17 @@
       <select id="cheat-item" aria-label="Item to add"></select>
       <button id="btn-cheat-add">Add to pack</button>
     </div>
+  </div>
+</div>
+
+<div id="screen-tutorial" class="screen hidden">
+  <h2 id="tut-title"></h2>
+  <div id="tut-body"></div>
+  <div id="tut-dots"></div>
+  <div id="tut-nav">
+    <button id="btn-tut-back">Back</button>
+    <button id="btn-tut-next">Next</button>
+    <button id="btn-tut-skip">Skip tutorial</button>
   </div>
 </div>
 
