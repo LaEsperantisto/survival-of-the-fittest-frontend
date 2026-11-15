@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
-  <script type="module" crossorigin src="./assets/index-D_peNksS.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DpOdCC_c.css">
+  <script type="module" crossorigin src="./assets/index-B9xrg8eR.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-mgJb5bCc.css">
 </head>
 <body>
 <div id="game-wrap">
@@ -61,6 +61,7 @@
     <button id="m-act">Act</button>
     <button id="m-use">Use</button>
     <button id="m-surge">Surge</button>
+    <button id="m-lamp">Lamp</button>
     <button id="m-next">Item</button>
     <button id="m-inv">Bag</button>
   </div>
@@ -105,8 +106,10 @@
   <button id="btn-death-title">Quit to Title</button>
 </div>
 
+<div id="lift-fx" class="hidden"></div>
+
 <div id="screen-win" class="screen hidden">
-  <h2 id="win-title">Evacuation Complete</h2>
+  <h2 id="win-title">Lift-Off</h2>
   <p id="win-stats"></p>
   <button id="btn-win-continue">Keep Surviving</button>
   <button id="btn-win-title">Quit to Title</button>
@@ -157,6 +160,8 @@
     <div class="equip-slot"><div class="equip-cell" id="eq-backpack"></div><div class="equip-lab">Backpack</div></div>
     <div class="equip-slot"><div class="equip-cell" id="eq-head"></div><div class="equip-lab">Head</div></div>
     <div class="equip-slot"><div class="equip-cell" id="eq-body"></div><div class="equip-lab">Body</div></div>
+    <div class="equip-slot"><div class="equip-cell" id="eq-regulator"></div><div class="equip-lab">Regulator</div></div>
+    <div class="equip-slot"><div class="equip-cell" id="eq-light"></div><div class="equip-lab">Light</div></div>
     <div class="equip-hint">Armour Slots — select gear, then click the empty slot (or press Equip) to wear it; click a filled slot to take it off.</div>
   </div>
   <div id="inv-main">
