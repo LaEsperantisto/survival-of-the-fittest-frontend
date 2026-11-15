@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
-  <script type="module" crossorigin src="./assets/index-BouOBUNM.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-hHZJNUs4.css">
+  <script type="module" crossorigin src="./assets/index-vOC_5K7P.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BEB6tn-z.css">
 </head>
 <body>
 <div id="game-wrap">
@@ -21,6 +21,12 @@
   <div id="breakbar" class="hidden"><div id="breakfill"></div></div>
   <div id="blockname" class="hidden"></div>
   <div id="hotbar"></div>
+  <div id="tut-card" class="hidden">
+    <div id="tut-title"></div>
+    <div id="tut-cap"></div>
+    <div id="tut-dots"></div>
+    <button id="btn-tut-skip">Skip tour (Esc)</button>
+  </div>
   <button id="surge-btn" class="hidden" title="Sweat surge (X): spend water to force your body cool">Sweat Surge (X)</button>
   <div id="prompt" class="hidden"></div>
   <div id="clockbox"><span id="clock-day">Day 1</span> <span id="clock-time">06:00</span> <span id="clock-temp">30&#176;C</span></div>
@@ -50,7 +56,7 @@
     <button id="m-break">Break</button>
     <button id="m-place">Place</button>
     <button id="m-act">Act</button>
-    <button id="m-drink">Drink</button>
+    <button id="m-use">Use</button>
     <button id="m-surge">Surge</button>
     <button id="m-next">Item</button>
     <button id="m-inv">Bag</button>
@@ -133,17 +139,6 @@
       <select id="cheat-item" aria-label="Item to add"></select>
       <button id="btn-cheat-add">Add to pack</button>
     </div>
-  </div>
-</div>
-
-<div id="screen-tutorial" class="screen hidden">
-  <h2 id="tut-title"></h2>
-  <div id="tut-body"></div>
-  <div id="tut-dots"></div>
-  <div id="tut-nav">
-    <button id="btn-tut-back">Back</button>
-    <button id="btn-tut-next">Next</button>
-    <button id="btn-tut-skip">Skip tutorial</button>
   </div>
 </div>
 
