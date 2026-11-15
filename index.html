@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
-  <script type="module" crossorigin src="./assets/index-Brk2uIFj.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-wcuzUpE1.css">
+  <script type="module" crossorigin src="./assets/index-DvChxjfG.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CkYuuhUI.css">
 </head>
 <body>
 <div id="game-wrap">
@@ -18,7 +18,7 @@
 <div id="hud" class="hidden">
   <div id="crosshair">+</div>
   <div id="breakbar" class="hidden"><div id="breakfill"></div></div>
-  <button id="surge-btn" class="hidden" title="Sweat surge (X): spend water to force your body cool">Sweat Surge</button>
+  <button id="surge-btn" class="hidden" title="Sweat surge (X): spend water to force your body cool">Sweat Surge (X)</button>
   <div id="prompt" class="hidden"></div>
   <div id="clockbox"><span id="clock-day">Day 1</span> <span id="clock-time">06:00</span> <span id="clock-temp">30&#176;C</span></div>
   <div id="quest"></div>
@@ -32,6 +32,7 @@
   </div>
   <div id="held"></div>
   <div id="weight"></div>
+  <div id="waypoint" class="hidden"><span id="wp-arrow">↑</span> <span id="wp-name"></span> <span id="wp-dist"></span></div>
   <div id="toast"></div>
 </div>
 
@@ -65,6 +66,7 @@
     <button id="btn-import">Import World</button>
     <input id="import-file" type="file" accept=".json" class="hidden">
     <button id="btn-instructions">How to survive</button>
+    <button id="btn-catalog-title">Catalog</button>
     <button id="btn-settings">Settings</button>
   </div>
 </div>
@@ -101,6 +103,7 @@
   <h2>Paused</h2>
   <button id="btn-resume">Resume</button>
   <button id="btn-pause-settings">Settings</button>
+  <button id="btn-catalog">Catalog</button>
   <button id="btn-save">Save Game</button>
   <button id="btn-exportworld">Export World (.json)</button>
   <button id="btn-quit">Quit to Title</button>
@@ -119,6 +122,11 @@
     <div class="cheat-lab">Immortality</div>
     <button data-immortal="0">Off</button>
     <button data-immortal="1">On</button>
+    <div class="cheat-lab">Add item</div>
+    <div id="cheat-item-row">
+      <select id="cheat-item" aria-label="Item to add"></select>
+      <button id="btn-cheat-add">Add to pack</button>
+    </div>
   </div>
 </div>
 
@@ -154,6 +162,16 @@
   <button class="close-btn close-x" aria-label="Close">✕</button>
   <h3 id="cache-title">Death Cache — take your belongings</h3>
   <div id="cache-list"></div>
+</div>
+
+<div id="screen-catalog" class="screen hidden">
+  <button class="close-btn close-x" aria-label="Close">✕</button>
+  <h2>Catalog</h2>
+  <div id="catalog-tabs">
+    <button class="tab active" data-tab="items">Items &amp; Blocks</button>
+    <button class="tab" data-tab="recipes">Recipes</button>
+  </div>
+  <div id="catalog-body"></div>
 </div>
 
 </body>
