@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='7.5'%20fill='%23ff7a2e'/%3E%3Cg%20stroke='%23ff7a2e'%20stroke-width='2.6'%20stroke-linecap='round'%3E%3Cline%20x1='16'%20y1='2.5'%20x2='16'%20y2='6.5'/%3E%3Cline%20x1='16'%20y1='25.5'%20x2='16'%20y2='29.5'/%3E%3Cline%20x1='2.5'%20y1='16'%20x2='6.5'%20y2='16'/%3E%3Cline%20x1='25.5'%20y1='16'%20x2='29.5'%20y2='16'/%3E%3Cline%20x1='6.4'%20y1='6.4'%20x2='9.3'%20y2='9.3'/%3E%3Cline%20x1='22.7'%20y1='22.7'%20x2='25.6'%20y2='25.6'/%3E%3Cline%20x1='25.6'%20y1='6.4'%20x2='22.7'%20y2='9.3'/%3E%3Cline%20x1='6.4'%20y1='25.6'%20x2='9.3'%20y2='22.7'/%3E%3C/g%3E%3C/svg%3E">
-  <script type="module" crossorigin src="./assets/index-DRGSHJJm.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-gJdjmjP2.css">
+  <script type="module" crossorigin src="./assets/index-w7aWVu-W.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CmBosRBO.css">
 </head>
 <body>
 <div id="game-wrap">
@@ -34,6 +34,7 @@
   <div id="clockbox"><span id="clock-day">Day 1</span> <span id="clock-time">06:00</span> <span id="clock-temp">30&#176;C</span></div>
   <div id="chips"><span id="chip-reg" class="chip hidden" title="Heat Regulators are holding this sealed room at neutral">&#9881; REGULATED</span><span id="chip-storm" class="chip hidden" title="A Sandstorm Breaker's calm surrounds you: the storm cannot touch you here">&#9678; STORM BROKEN</span><span id="chip-nap" class="chip hidden" title="The next long sleep at a Bed is ready">Z NAP READY</span></div>
   <div id="quest"></div>
+  <div id="map" class="hidden"><canvas id="map-canvas" width="162" height="162"></canvas><div id="map-pins" class="hidden"></div></div>
   <div id="bars">
     <div class="bar-row"><span class="bar-label">HP</span>
       <div class="bar" id="bar-health"><div class="fill"></div><div class="safe"></div></div></div>
@@ -52,7 +53,6 @@
 
 <!-- Mobile controls -->
 <div id="mobile" class="hidden">
-  <button id="m-pause">||</button>
   <div id="stick"><div id="knob"></div></div>
   <div id="mbtns">
     <button id="m-jump">Jump</button>
@@ -66,6 +66,7 @@
     <button id="m-next">Item</button>
     <button id="m-drop">Drop</button>
     <button id="m-inv">Bag</button>
+    <button id="m-pause">Pause</button>
   </div>
 </div>
 
@@ -92,6 +93,12 @@
   <button class="close-btn close-x" aria-label="Close">✕</button>
   <h2>How to survive</h2>
   <div id="instr-body"></div>
+</div>
+
+<div id="screen-chronicle" class="screen hidden">
+  <button class="close-btn close-x" aria-label="Close">✕</button>
+  <h2>Chronicle</h2>
+  <div id="chronicle-body"></div>
 </div>
 
 <div id="screen-settings" class="screen hidden">
@@ -124,6 +131,7 @@
   <button id="btn-pause-instructions">Instructions</button>
   <button id="btn-pause-settings">Settings</button>
   <button id="btn-catalog">Catalog</button>
+  <button id="btn-chronicle">Chronicle</button>
   <button id="btn-save">Save Game</button>
   <button id="btn-exportworld">Export World (.json)</button>
   <button id="btn-quit">Quit to Title</button>
