@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='7.5'%20fill='%23ff7a2e'/%3E%3Cg%20stroke='%23ff7a2e'%20stroke-width='2.6'%20stroke-linecap='round'%3E%3Cline%20x1='16'%20y1='2.5'%20x2='16'%20y2='6.5'/%3E%3Cline%20x1='16'%20y1='25.5'%20x2='16'%20y2='29.5'/%3E%3Cline%20x1='2.5'%20y1='16'%20x2='6.5'%20y2='16'/%3E%3Cline%20x1='25.5'%20y1='16'%20x2='29.5'%20y2='16'/%3E%3Cline%20x1='6.4'%20y1='6.4'%20x2='9.3'%20y2='9.3'/%3E%3Cline%20x1='22.7'%20y1='22.7'%20x2='25.6'%20y2='25.6'/%3E%3Cline%20x1='25.6'%20y1='6.4'%20x2='22.7'%20y2='9.3'/%3E%3Cline%20x1='6.4'%20y1='25.6'%20x2='9.3'%20y2='22.7'/%3E%3C/g%3E%3C/svg%3E">
-  <script type="module" crossorigin src="./assets/index-BXCjdHTZ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Co3rBbP-.css">
+  <script type="module" crossorigin src="./assets/index-erkZUAEu.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C0g8OiWg.css">
 </head>
 <body>
 <div id="game-wrap">
@@ -177,9 +177,15 @@
 <div id="ui-inventory" class="panel hidden">
   <button class="close-btn close-x" aria-label="Close">✕</button>
   <div id="chest-section" class="hidden">
-    <h3>Supply Chest <span id="chest-info"></span></h3>
+    <h3>Chest <span id="chest-info"></span></h3>
     <button id="btn-sort-chest" class="sort-btn">Sort</button>
     <div id="chest-grid"></div>
+  </div>
+  <div id="ifc-section" class="hidden">
+    <h3>Chest Interface <span id="ifc-info"></span></h3>
+    <input id="ifc-search" type="text" placeholder="Search the cluster…" autocomplete="off" spellcheck="false">
+    <button id="btn-ifc-stow" class="sort-btn">Stow selected</button>
+    <div id="ifc-list"></div>
   </div>
   <h3>Inventory</h3>
   <button id="btn-sort-inv" class="sort-btn">Sort</button>
