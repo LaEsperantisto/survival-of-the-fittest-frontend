@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='7.5'%20fill='%23ff7a2e'/%3E%3Cg%20stroke='%23ff7a2e'%20stroke-width='2.6'%20stroke-linecap='round'%3E%3Cline%20x1='16'%20y1='2.5'%20x2='16'%20y2='6.5'/%3E%3Cline%20x1='16'%20y1='25.5'%20x2='16'%20y2='29.5'/%3E%3Cline%20x1='2.5'%20y1='16'%20x2='6.5'%20y2='16'/%3E%3Cline%20x1='25.5'%20y1='16'%20x2='29.5'%20y2='16'/%3E%3Cline%20x1='6.4'%20y1='6.4'%20x2='9.3'%20y2='9.3'/%3E%3Cline%20x1='22.7'%20y1='22.7'%20x2='25.6'%20y2='25.6'/%3E%3Cline%20x1='25.6'%20y1='6.4'%20x2='22.7'%20y2='9.3'/%3E%3Cline%20x1='6.4'%20y1='25.6'%20x2='9.3'%20y2='22.7'/%3E%3C/g%3E%3C/svg%3E">
-  <script type="module" crossorigin src="./assets/index-DyrwAFdw.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-C0g8OiWg.css">
+  <script type="module" crossorigin src="./assets/index-SJv2l2bm.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index--Zt5bdBh.css">
 </head>
 <body>
 <div id="game-wrap">
@@ -219,6 +219,21 @@
       <div class="fire-col"><div class="fire-lab">Output Slot</div><div id="fire-output-grid"></div><button class="sort-btn fire-sort" data-grid="output">Sort</button></div>
     </div>
     <div class="fire-hint">Drag fuel onto the Coals box — it burns away on the way in and its charges stay banked in the fire; cookables go to the Input Slot, finished cooking lands in the Output Slot. Each cooking job costs one fuel charge; a lit fire also burns one charge every 10 minutes.</div>
+  </div>
+  <div id="pot-section" class="hidden">
+    <h3>Cooking Pot <span id="pot-gauge"></span></h3>
+    <div id="pot-row">
+      <div id="pot-art"></div>
+      <button id="btn-pot">Light fire</button>
+    </div>
+    <div id="pot-grids">
+      <div class="fire-col"><div class="fire-lab">Coals</div><div id="pot-coals">No fuel banked — drop fuel here</div></div>
+      <div class="fire-col"><div class="fire-lab">Input Grid</div><div id="pot-input-grid"></div><button class="sort-btn fire-sort" data-grid="input">Sort</button></div>
+      <div class="fire-col"><div class="fire-lab">Output Grid</div><div id="pot-output-grid"></div><button class="sort-btn fire-sort" data-grid="output">Sort</button></div>
+    </div>
+    <div class="fire-hint">Fuel burns away into charges the same way as a Campfire. Stage ingredients on the Input Grid and press Cook on a Dishes row — the recipe decides whether the fire is touched at all. Finished dishes land in the Output Grid.</div>
+    <div class="fire-lab" style="margin-top:12px">Dishes</div>
+    <div id="pot-dishes"></div>
   </div>
   <div id="inv-craft-bar"><button id="btn-inv-craft">Craft by hand</button></div>
   <div id="inv-craft" class="hidden"></div>
