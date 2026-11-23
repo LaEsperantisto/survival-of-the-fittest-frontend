@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='7.5'%20fill='%23ff7a2e'/%3E%3Cg%20stroke='%23ff7a2e'%20stroke-width='2.6'%20stroke-linecap='round'%3E%3Cline%20x1='16'%20y1='2.5'%20x2='16'%20y2='6.5'/%3E%3Cline%20x1='16'%20y1='25.5'%20x2='16'%20y2='29.5'/%3E%3Cline%20x1='2.5'%20y1='16'%20x2='6.5'%20y2='16'/%3E%3Cline%20x1='25.5'%20y1='16'%20x2='29.5'%20y2='16'/%3E%3Cline%20x1='6.4'%20y1='6.4'%20x2='9.3'%20y2='9.3'/%3E%3Cline%20x1='22.7'%20y1='22.7'%20x2='25.6'%20y2='25.6'/%3E%3Cline%20x1='25.6'%20y1='6.4'%20x2='22.7'%20y2='9.3'/%3E%3Cline%20x1='6.4'%20y1='25.6'%20x2='9.3'%20y2='22.7'/%3E%3C/g%3E%3C/svg%3E">
-  <script type="module" crossorigin src="./assets/index-DTYo2Q5l.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CQ3Cp6zq.css">
+  <script type="module" crossorigin src="./assets/index-DHMr8-SG.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CBuXY3Q5.css">
 </head>
 <body>
 <div id="game-wrap">
@@ -141,6 +141,7 @@
   <div id="flight-errors"></div>
   <div id="flight-keys">W/S thrust &middot; A/D heading &middot; Space/Ctrl climb&ndash;descend &middot; hold Ctrl down to land &middot; F outline &middot; E leave the yoke (P / Esc too)</div>
   <button id="flight-take" disabled>Lift off</button>
+  <button id="flight-leave" class="hidden">Leave Planet</button>
   <button id="flight-outline">Frame outline (F)</button>
 </div>
 
@@ -285,6 +286,24 @@
   <h3>Trader — a straight swap, no coin</h3>
   <div id="trade-offers"></div>
   <p id="trade-note" class="trade-note"></p>
+</div>
+
+<div id="ui-core" class="panel hidden">
+  <button class="close-btn close-x" aria-label="Close">✕</button>
+  <h3>Engine Core <button id="btn-catalog-core" class="sort-btn">Catalog</button></h3>
+  <div id="core-slots">
+    <div class="core-slot" id="core-slot-0"><div class="core-slot-art"></div><div class="core-slot-lab">Port 1</div><div class="core-slot-state"></div></div>
+    <div class="core-slot" id="core-slot-1"><div class="core-slot-art"></div><div class="core-slot-lab">Port 2</div><div class="core-slot-state"></div></div>
+  </div>
+  <div class="fire-hint">Hold a Rocket Fuel or Super Rocket Fuel canister and click an empty port to load it. Click a loaded port to take the canister back out — but the moment the engines drink from a port, that canister is locked in until it runs dry, and breaking the Core destroys a locked one. A Super Rocket Fuel canister never burns: it waits in its port for the leap between worlds.</div>
+</div>
+
+<div id="ui-leave" class="panel hidden">
+  <button class="close-btn close-x" aria-label="Close">✕</button>
+  <h3>Leave Planet</h3>
+  <p id="leave-warn">The climb burns hard and long. Everything aboard the Ship travels with you; everything standing on the ground does not — your Base, farms, caches and Pins stay on this world, waiting.</p>
+  <div id="leave-check"></div>
+  <button id="btn-leave" disabled>Burn for the Second Planet</button>
 </div>
 
 <div id="screen-catalog" class="screen hidden">
