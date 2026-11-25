@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Survival of the Fittest</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='7.5'%20fill='%23ff7a2e'/%3E%3Cg%20stroke='%23ff7a2e'%20stroke-width='2.6'%20stroke-linecap='round'%3E%3Cline%20x1='16'%20y1='2.5'%20x2='16'%20y2='6.5'/%3E%3Cline%20x1='16'%20y1='25.5'%20x2='16'%20y2='29.5'/%3E%3Cline%20x1='2.5'%20y1='16'%20x2='6.5'%20y2='16'/%3E%3Cline%20x1='25.5'%20y1='16'%20x2='29.5'%20y2='16'/%3E%3Cline%20x1='6.4'%20y1='6.4'%20x2='9.3'%20y2='9.3'/%3E%3Cline%20x1='22.7'%20y1='22.7'%20x2='25.6'%20y2='25.6'/%3E%3Cline%20x1='25.6'%20y1='6.4'%20x2='22.7'%20y2='9.3'/%3E%3Cline%20x1='6.4'%20y1='25.6'%20x2='9.3'%20y2='22.7'/%3E%3C/g%3E%3C/svg%3E">
-  <script type="module" crossorigin src="./assets/index-BBmsKT2s.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CBuXY3Q5.css">
+  <script type="module" crossorigin src="./assets/index-CF1axO9J.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C_o2A9cm.css">
 </head>
 <body>
 <div id="game-wrap">
@@ -143,6 +143,37 @@
   <button id="flight-take" disabled>Lift off</button>
   <button id="flight-leave" class="hidden">Leave Planet</button>
   <button id="flight-outline">Frame outline (F)</button>
+</div>
+
+<!-- Hover Sled panel: charge, boarding, bolt-on upgrades, sled-chest -->
+<div id="ui-sled" class="hidden">
+  <div class="sled-head">
+    <span class="sled-title">Hover Sled</span>
+    <span id="sled-charge">—</span>
+  </div>
+  <button id="sled-board">Board</button>
+  <button id="sled-up-cargo">Bolt on the Cargo Sled</button>
+  <button id="sled-up-blade">Bolt on the Sled Blade</button>
+  <button id="sled-up-drill">Bolt on the Sled Drill</button>
+  <div id="sled-cargo" class="hidden">
+    <div id="sled-cargo-rows"></div>
+    <p class="sled-stow-row">
+      <select id="sled-stow-pick"></select>
+      <button id="sled-stow">Stow all</button>
+    </p>
+  </div>
+  <div class="sled-keys">Charge drains while you ride &middot; park it on a powered Dock Pad to recharge &middot; E steps off</div>
+</div>
+
+<!-- Gun Turret panel: magazine, slug loading, fauna toggle -->
+<div id="ui-turret" class="hidden">
+  <div class="sled-head">
+    <span class="sled-title">Gun Turret</span>
+    <span id="turret-mag">—</span>
+  </div>
+  <button id="turret-load">Load Slugs</button>
+  <button id="turret-fauna">Fauna targets: ON</button>
+  <div class="sled-keys">Needs power &middot; eight-cell reach &middot; Slugs are cast at the Foundry &middot; machines are always fair game</div>
 </div>
 
 <div id="screen-pause" class="screen hidden">
@@ -283,9 +314,21 @@
 
 <div id="ui-trade" class="panel hidden">
   <button class="close-btn close-x" aria-label="Close">✕</button>
-  <h3>Trader — a straight swap, no coin</h3>
+  <h3>Nomad — a straight swap, no coin</h3>
   <div id="trade-offers"></div>
   <p id="trade-note" class="trade-note"></p>
+</div>
+
+<div id="ui-story" class="panel hidden story-panel">
+  <button class="close-btn close-x" aria-label="Close">✕</button>
+  <h3 id="story-title"></h3>
+  <p id="story-who" class="story-who"></p>
+  <p id="story-card" class="story-card"></p>
+  <div class="story-foot">
+    <span id="story-page" class="story-page"></span>
+    <button id="story-next">Next</button>
+  </div>
+  <p class="trade-note">E, Enter or Space turns the card.</p>
 </div>
 
 <div id="ui-core" class="panel hidden">
